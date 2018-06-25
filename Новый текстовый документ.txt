@@ -1,0 +1,43 @@
+бифо	
+background: rgba(230, 10, 50, 0.8);
+афта	
+background: rgba(11,72,174,0.8);
+бывшая розовая секция
+	<section id="sect2" class="sect2">
+		<div class="Mus"><a href="#"><p>MUSIC</p></a></div>
+		<div class="image_wrap image-flex">
+			<a href="index2.html"><img src="img/hldzcld.png" class="image-album"></a>
+			<a href="index3.html"><img src="img/bldcrk.png" class="image-album"></a>	
+		</div>
+		<div class="textalb image-flex">
+				<a href="index2.html">Hold the cold</a>
+				<a href="index3.html">Blood Creek</a>
+		</div>	
+	</section>
+	
+
+
+
+	 минусы кота
+	 прививки
+	 бабос на содержание
+	 сужение вариков при переезде
+
+
+$(document).ready(function(){
+	$("#menu1").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+			
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1000);
+		console.log(top);
+	});
+});
